@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simply Dark</title>
+  <link rel="stylesheet" type="text/css" href="popup.css">
+</head>
+<body>
+  <h1>Simply Dark</h1>
+  <p id="currentDomain"></p>
+  <div class="toggle-container">
+    <input type="checkbox" id="darkModeToggle" class="toggle-input">
+    <label for="darkModeToggle" class="toggle-label"></label>
+  </div>
+  <div class="color-settings">
+    <div class="colors-title">Colors</div>
+    <div class="colors-row">
+      <label><span class="color-label">Background</span> <input type="color" id="backgroundColor" value="#121212"></label>
+      <label><span class="color-label">Border</span> <input type="color" id="borderColor" value="#555555"></label>
+    </div>
+    <div class="colors-row">
+      <label><span class="color-label">Text</span> <input type="color" id="textColor" value="#e4e4e4"></label>
+      <label><span class="color-label">Link</span> <input type="color" id="linkColor" value="#3391ff"></label>
+    </div>
+  </div>
+  <div class="button-container">
+    <button id="resetColors">Reset Colors</button>
+    <button id="saveColors">Save Colors</button>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

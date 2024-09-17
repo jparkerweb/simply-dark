@@ -1,0 +1,12 @@
+.simply-dark-mode {
+  background-color: #1a1a1a !important;
+  color: #e0e0e0 !important;
+}
+
+.simply-dark-mode a {
+  color: #6ab0ff !important;
+}
+
+.simply-dark-mode img {
+  filter: brightness(0.8) contrast(1.2);
+}
