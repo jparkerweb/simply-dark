@@ -39,10 +39,6 @@
   },
   "commands": {
     "toggle-dark-mode": {
-      "suggested_key": {
-        "default": "Ctrl+Shift+S",
-        "mac": "Command+Shift+S"
-      },
       "description": "Toggle dark mode for current domain"
     }
   }
