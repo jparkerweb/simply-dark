@@ -32,11 +32,13 @@ async function loadDomainPreferences() {
 
 function applyDarkMode() {
   document.documentElement.classList.add('simply-dark-mode');
+  document.documentElement.style.setProperty('color-scheme', 'dark');
   invertColors();
 }
 
 function removeDarkMode() {
   document.documentElement.classList.remove('simply-dark-mode');
+  document.documentElement.style.removeProperty('color-scheme');
   removeInversion();
 }
 
@@ -137,6 +139,8 @@ async function initializeDarkMode() {
     const DomainPreferences = await loadDomainPreferences();
     const darkModeEnabled = await DomainPreferences.getDarkModeForDomain(domain);
     if (darkModeEnabled) {
+      // Apply dark mode immediately
+      document.documentElement.style.setProperty('color-scheme', 'dark');
       applyDarkMode();
     }
   } catch (error) {
