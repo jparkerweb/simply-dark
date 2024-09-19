@@ -40,6 +40,18 @@ function removeDarkMode() {
   document.documentElement.classList.remove('simply-dark-mode');
   document.documentElement.style.removeProperty('color-scheme');
   removeInversion();
+  removeDarkModeStyles();
+}
+
+function removeDarkModeStyles() {
+  const elements = document.getElementsByTagName('*');
+  for (let i = 0; i < elements.length; i++) {
+    elements[i].style.removeProperty('background-color');
+    elements[i].style.removeProperty('color');
+    elements[i].style.removeProperty('border-color');
+  }
+  document.body.style.removeProperty('background-color');
+  document.body.style.removeProperty('color');
 }
 
 function getCurrentDomain() {
@@ -54,6 +66,10 @@ async function toggleDarkModeForDomain(domain) {
   } else {
     removeDarkMode();
   }
+  // Force a repaint to ensure all styles are updated
+  document.body.style.display = 'none';
+  document.body.offsetHeight; // Trigger a reflow
+  document.body.style.display = '';
   return newState;
 }
 
@@ -75,15 +91,17 @@ function invertColors() {
     document.head.appendChild(style);
   }
 
-  chrome.storage.sync.get('customColors', function(result) {
+  chrome.storage.sync.get(['customColors', 'cssVersion'], function(result) {
     const colors = result.customColors || {
       backgroundColor: '#121212',
       textColor: '#e4e4e4',
       linkColor: '#3391ff',
       borderColor: '#555555'
     };
+    const cssVersion = result.cssVersion || 1;
 
     const css = `
+      /* CSS Version: ${cssVersion} */
       html.simply-dark-mode {
         --background-color: ${colors.backgroundColor};
         --text-color: ${colors.textColor};
@@ -115,9 +133,6 @@ function invertColors() {
       html.simply-dark-mode a:active {
         color: var(--link-color) !important;
       }
-      html.simply-dark-mode .card {
-        box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
-      }
     `;
 
     style.textContent = css;
@@ -128,8 +143,13 @@ function removeInversion() {
   const styleId = 'simply-dark-style';
   const style = document.getElementById(styleId);
   if (style) {
-    style.textContent = '';
+    style.remove(); // Remove the style element completely
   }
+  // Remove inline styles set by the extension
+  document.documentElement.style.removeProperty('--background-color');
+  document.documentElement.style.removeProperty('--text-color');
+  document.documentElement.style.removeProperty('--link-color');
+  document.documentElement.style.removeProperty('--border-color');
 }
 
 // Initialize dark mode based on stored preference
