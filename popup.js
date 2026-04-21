@@ -1,88 +1,117 @@
-document.addEventListener('DOMContentLoaded', function() {
-  const toggleSwitch = document.getElementById('darkModeToggle');
-  const domainDisplay = document.getElementById('currentDomain');
-  const saveColorsButton = document.getElementById('saveColors');
-  const resetColorsButton = document.getElementById('resetColors');
-  const colorInputs = {
-    backgroundColor: document.getElementById('backgroundColor'),
-    textColor: document.getElementById('textColor'),
-    linkColor: document.getElementById('linkColor'),
-    borderColor: document.getElementById('borderColor')
-  };
+// ID -> storage-key map for color inputs in popup.html:
+//   backgroundColor -> bg
+//   textColor       -> text
+//   linkColor       -> link
+//   borderColor     -> border
+// Storage shape: chrome.storage.local = {
+//   domains: { [host]: bool },
+//   colors: { bg, text, link, border },       // persisted (committed via Save)
+//   previewColors: { bg, text, link, border } // ephemeral live-preview; cleared on close/save/reset
+// }
 
-  const defaultColors = {
-    backgroundColor: '#121212',
-    textColor: '#e4e4e4',
-    linkColor: '#3391ff',
-    borderColor: '#555555'
-  };
+const DEFAULTS = { bg: '#121212', text: '#e4e4e4', link: '#3391ff', border: '#555555' };
+const COLOR_MAP = { backgroundColor: 'bg', textColor: 'text', linkColor: 'link', borderColor: 'border' };
 
-  // Load saved colors
-  chrome.storage.sync.get('customColors', function(result) {
-    if (result.customColors) {
-      Object.keys(colorInputs).forEach(key => {
-        colorInputs[key].value = result.customColors[key];
-      });
-    }
-  });
+let currentDomain = null;
 
-  chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
-    const domain = new URL(tabs[0].url).hostname;
-    domainDisplay.textContent = domain;
-
-    chrome.runtime.sendMessage({action: "getDarkModeState", domain}, function(response) {
-      if (chrome.runtime.lastError) {
-        console.error('Error:', chrome.runtime.lastError);
-        toggleSwitch.disabled = true;
-      } else if (response && response.darkModeEnabled !== undefined) {
-        toggleSwitch.checked = response.darkModeEnabled;
-      } else {
-        console.error('Invalid response from background script:', response);
-        toggleSwitch.disabled = true;
-      }
-    });
-  });
-
-  toggleSwitch.addEventListener('change', function() {
-    chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
-      const domain = new URL(tabs[0].url).hostname;
-      chrome.runtime.sendMessage({action: "toggleDarkMode", domain}, function(response) {
-        if (chrome.runtime.lastError) {
-          console.error('Error:', chrome.runtime.lastError);
-        } else if (response && response.newState !== undefined) {
-          toggleSwitch.checked = response.newState;
-          reloadCurrentTab();
-        } else {
-          console.error('Invalid response from background script:', response);
-        }
-      });
-    });
-  });
-
-  saveColorsButton.addEventListener('click', function() {
-    const customColors = {};
-    Object.keys(colorInputs).forEach(key => {
-      customColors[key] = colorInputs[key].value;
-    });
-    chrome.storage.sync.set({customColors: customColors}, function() {
-      console.log('Custom colors saved');
-      reloadCurrentTab();
-    });
-  });
-
-  resetColorsButton.addEventListener('click', function() {
-    Object.keys(colorInputs).forEach(key => {
-      colorInputs[key].value = defaultColors[key];
-    });
-    chrome.storage.sync.remove('customColors', function() {
-      console.log('Colors reset to default');
-      reloadCurrentTab();
-    });
-  });
-
-  function reloadCurrentTab() {
-    chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
-      chrome.tabs.reload(tabs[0].id);
-    });
+async function getActiveDomain() {
+  const override = new URLSearchParams(location.search).get('testDomain');
+  if (override) return override;
+  const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
+  if (!tab?.url) return null;
+  try {
+    return new URL(tab.url).hostname.replace(/^www\./, '');
+  } catch {
+    return null;
   }
+}
+
+function setInputs(colors) {
+  for (const [inputId, key] of Object.entries(COLOR_MAP)) {
+    const el = document.getElementById(inputId);
+    if (el) el.value = colors?.[key] ?? DEFAULTS[key];
+  }
+}
+
+function readInputs() {
+  const colors = {};
+  for (const [inputId, key] of Object.entries(COLOR_MAP)) {
+    colors[key] = document.getElementById(inputId).value;
+  }
+  return colors;
+}
+
+async function render() {
+  currentDomain = await getActiveDomain();
+  const domainEl = document.getElementById('currentDomain');
+  const toggle = document.getElementById('darkModeToggle');
+
+  if (currentDomain) {
+    domainEl.textContent = currentDomain;
+  } else {
+    domainEl.textContent = 'No active tab';
+    toggle.disabled = true;
+  }
+
+  await chrome.storage.local.remove('previewColors');
+  const { domains = {}, colors } = await chrome.storage.local.get(['domains', 'colors']);
+  toggle.checked = !!domains[currentDomain];
+  setInputs(colors);
+}
+
+async function onToggleChange() {
+  if (!currentDomain) return;
+  const { domains = {} } = await chrome.storage.local.get('domains');
+  domains[currentDomain] = !domains[currentDomain];
+  await chrome.storage.local.set({ domains });
+}
+
+async function onColorInput() {
+  await chrome.storage.local.set({ previewColors: readInputs() });
+}
+
+async function onSaveColors() {
+  await chrome.storage.local.set({ colors: readInputs() });
+  await chrome.storage.local.remove('previewColors');
+}
+
+async function onResetColors() {
+  await chrome.storage.local.remove(['colors', 'previewColors']);
+  for (const [inputId, key] of Object.entries(COLOR_MAP)) {
+    document.getElementById(inputId).value = DEFAULTS[key];
+  }
+}
+
+function syncUIFromStorage(patch) {
+  if ('domains' in patch) {
+    const toggle = document.getElementById('darkModeToggle');
+    toggle.checked = !!(patch.domains && patch.domains[currentDomain]);
+  }
+  if ('colors' in patch) {
+    setInputs(patch.colors);
+  }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  render();
+  document.getElementById('darkModeToggle').addEventListener('change', onToggleChange);
+  document.getElementById('saveColors').addEventListener('click', onSaveColors);
+  document.getElementById('resetColors').addEventListener('click', onResetColors);
+
+  for (const inputId of Object.keys(COLOR_MAP)) {
+    const el = document.getElementById(inputId);
+    if (el) el.addEventListener('input', onColorInput);
+  }
+
+  chrome.storage.onChanged.addListener((changes, area) => {
+    if (area !== 'local') return;
+    const patch = {};
+    if (changes.domains) patch.domains = changes.domains.newValue || {};
+    if (changes.colors) patch.colors = changes.colors.newValue;
+    if ('domains' in patch || 'colors' in patch) syncUIFromStorage(patch);
+  });
+});
+
+window.addEventListener('pagehide', () => {
+  chrome.storage.local.remove('previewColors');
 });

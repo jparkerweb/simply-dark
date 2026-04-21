@@ -1,0 +1,607 @@
+- generic [ref=e2]:
+  - link "Skip to main content" [ref=e3] [cursor=pointer]:
+    - /url: "#content-area"
+  - generic [ref=e4]:
+    - generic [ref=e6]:
+      - generic [ref=e7]:
+        - generic [ref=e8]:
+          - generic [ref=e9]:
+            - link "HyperFrames home page light logo" [ref=e10] [cursor=pointer]:
+              - /url: /
+              - generic [ref=e11]: HyperFrames home page
+              - img "light logo" [ref=e12]
+            - button "Toggle dark mode" [ref=e13] [cursor=pointer]:
+              - generic [ref=e14]:
+                - img [ref=e15]
+                - img [ref=e22]
+          - generic [ref=e27]:
+            - button "Open search" [ref=e28] [cursor=pointer]:
+              - generic [ref=e29]:
+                - img [ref=e30]
+                - generic [ref=e33]: Search...
+              - generic [ref=e34]: ⌘K
+            - button "Toggle assistant panel" [ref=e35] [cursor=pointer]:
+              - img [ref=e36]
+          - generic [ref=e39]:
+            - list
+            - generic [ref=e40]:
+              - heading "Getting Started" [level=5] [ref=e42]
+              - list [ref=e43]:
+                - listitem [ref=e44]:
+                  - link "Introduction" [ref=e45] [cursor=pointer]:
+                    - /url: /introduction
+                    - generic [ref=e48]: Introduction
+                - listitem [ref=e49]:
+                  - link "Quickstart" [ref=e50] [cursor=pointer]:
+                    - /url: /quickstart
+                    - generic [ref=e53]: Quickstart
+                - listitem [ref=e54]:
+                  - link "Examples" [ref=e55] [cursor=pointer]:
+                    - /url: /examples
+                    - generic [ref=e58]: Examples
+            - generic [ref=e59]:
+              - heading "Concepts" [level=5] [ref=e61]
+              - list [ref=e62]:
+                - listitem [ref=e63]:
+                  - link "Compositions" [ref=e64] [cursor=pointer]:
+                    - /url: /concepts/compositions
+                    - generic [ref=e67]: Compositions
+                - listitem [ref=e68]:
+                  - link "Data Attributes" [ref=e69] [cursor=pointer]:
+                    - /url: /concepts/data-attributes
+                    - generic [ref=e72]: Data Attributes
+                - listitem [ref=e73]:
+                  - link "Frame Adapters" [ref=e74] [cursor=pointer]:
+                    - /url: /concepts/frame-adapters
+                    - generic [ref=e77]: Frame Adapters
+                - listitem [ref=e78]:
+                  - link "Deterministic Rendering" [ref=e79] [cursor=pointer]:
+                    - /url: /concepts/determinism
+                    - generic [ref=e82]: Deterministic Rendering
+            - generic [ref=e83]:
+              - heading "Guides" [level=5] [ref=e85]
+              - list [ref=e86]:
+                - listitem [ref=e87]:
+                  - link "Website to Video" [ref=e88] [cursor=pointer]:
+                    - /url: /guides/website-to-video
+                    - generic [ref=e91]: Website to Video
+                - listitem [ref=e92]:
+                  - link "Prompt Guide" [ref=e93] [cursor=pointer]:
+                    - /url: /guides/prompting
+                    - generic [ref=e96]: Prompt Guide
+                - listitem [ref=e97]:
+                  - link "Hyperframes vs Remotion" [ref=e98] [cursor=pointer]:
+                    - /url: /guides/hyperframes-vs-remotion
+                    - generic [ref=e101]: Hyperframes vs Remotion
+                - listitem [ref=e102]:
+                  - link "GSAP Animation" [ref=e103] [cursor=pointer]:
+                    - /url: /guides/gsap-animation
+                    - generic [ref=e106]: GSAP Animation
+                - listitem [ref=e107]:
+                  - link "Rendering" [ref=e108] [cursor=pointer]:
+                    - /url: /guides/rendering
+                    - generic [ref=e111]: Rendering
+                - listitem [ref=e112]:
+                  - link "HDR Rendering" [ref=e113] [cursor=pointer]:
+                    - /url: /guides/hdr
+                    - generic [ref=e116]: HDR Rendering
+                - listitem [ref=e117]:
+                  - link "Performance" [ref=e118] [cursor=pointer]:
+                    - /url: /guides/performance
+                    - generic [ref=e121]: Performance
+                - listitem [ref=e122]:
+                  - link "Common Mistakes" [ref=e123] [cursor=pointer]:
+                    - /url: /guides/common-mistakes
+                    - generic [ref=e126]: Common Mistakes
+                - listitem [ref=e127]:
+                  - link "Troubleshooting" [ref=e128] [cursor=pointer]:
+                    - /url: /guides/troubleshooting
+                    - generic [ref=e131]: Troubleshooting
+        - list [ref=e132]:
+          - listitem
+      - generic [ref=e133]:
+        - generic [ref=e135]:
+          - link "Documentation" [ref=e136] [cursor=pointer]:
+            - /url: /introduction
+            - text: Documentation
+          - link "Catalog" [ref=e138] [cursor=pointer]:
+            - /url: /catalog/blocks/instagram-follow
+            - text: Catalog
+          - link "Packages" [ref=e140] [cursor=pointer]:
+            - /url: /packages/core
+            - text: Packages
+          - link "Reference" [ref=e142] [cursor=pointer]:
+            - /url: /reference/html-schema
+            - text: Reference
+        - generic [ref=e144]:
+          - banner [ref=e145]:
+            - generic [ref=e146]:
+              - generic [ref=e147]: Getting Started
+              - generic [ref=e148]:
+                - heading "Quickstart" [level=1] [ref=e149]
+                - generic [ref=e150]:
+                  - button "Copy page" [ref=e151] [cursor=pointer]:
+                    - generic [ref=e152]:
+                      - img [ref=e153]
+                      - generic [ref=e156]: Copy page
+                  - button "More actions" [ref=e157] [cursor=pointer]:
+                    - img [ref=e158]
+            - paragraph [ref=e161]: Create, preview, and render your first Hyperframes video in under two minutes.
+          - generic [ref=e162]:
+            - generic [ref=e163]: Go from zero to a rendered MP4 — either by prompting your AI agent or by starting a project manually.
+            - 'heading "Navigate to header Option 1: With an AI coding agent (recommended)" [level=2] [ref=e164]':
+              - link "Navigate to header" [ref=e165] [cursor=pointer]:
+                - /url: "#option-1-with-an-ai-coding-agent-recommended"
+                - img [ref=e167]
+              - generic [ref=e169] [cursor=pointer]: "Option 1: With an AI coding agent (recommended)"
+            - generic [ref=e170]: "Install the HyperFrames skills, then describe the video you want:"
+            - generic [ref=e171]:
+              - generic [ref=e172]:
+                - button "Copy the contents from the code block" [ref=e174] [cursor=pointer]:
+                  - img [ref=e175]
+                - button "Ask AI" [ref=e179] [cursor=pointer]:
+                  - img [ref=e180]
+              - code [ref=e186]:
+                - generic [ref=e187]: npx skills add heygen-com/hyperframes
+            - generic [ref=e188]:
+              - text: This teaches your agent (Claude Code, Cursor, Gemini CLI, Codex) how to write correct compositions and GSAP animations. In Claude Code the skills register as slash commands —
+              - code [ref=e189]: /hyperframes
+              - text: for composition authoring,
+              - code [ref=e190]: /hyperframes-cli
+              - text: for CLI commands, and
+              - code [ref=e191]: /gsap
+              - text: for animation help. Invoking the slash command loads the skill context explicitly, which produces correct output the first time.
+            - 'heading "Navigate to header Try it: example prompts" [level=3] [ref=e192]':
+              - link "Navigate to header" [ref=e193] [cursor=pointer]:
+                - /url: "#try-it-example-prompts"
+                - img [ref=e195]
+              - generic [ref=e197] [cursor=pointer]: "Try it: example prompts"
+            - generic [ref=e198]: Copy any of these into your agent to get started.
+            - generic [ref=e199]:
+              - generic [ref=e202]:
+                - heading "Cold start — describe what you want" [level=2] [ref=e203]
+                - blockquote [ref=e205]:
+                  - generic [ref=e206]:
+                    - text: Using
+                    - code [ref=e207]: /hyperframes
+                    - text: ", create a 10-second product intro with a fade-in title over a dark background and subtle background music."
+              - generic [ref=e210]:
+                - heading "Warm start — turn existing context into a video" [level=2] [ref=e211]
+                - generic [ref=e212]:
+                  - blockquote [ref=e213]:
+                    - generic [ref=e214]:
+                      - text: Take a look at this GitHub repo
+                      - link "https://github.com/heygen-com/hyperframes" [ref=e215] [cursor=pointer]:
+                        - /url: https://github.com/heygen-com/hyperframes
+                      - text: and explain its uses and architecture to me using
+                      - code [ref=e216]: /hyperframes
+                      - text: .
+                  - blockquote [ref=e217]:
+                    - generic [ref=e218]:
+                      - text: Summarize the attached PDF into a 45-second pitch video using
+                      - code [ref=e219]: /hyperframes
+                      - text: .
+                  - blockquote [ref=e220]:
+                    - generic [ref=e221]:
+                      - text: Turn this CSV into an animated bar chart race using
+                      - code [ref=e222]: /hyperframes
+                      - text: .
+              - generic [ref=e225]:
+                - heading "Format-specific" [level=2] [ref=e226]
+                - blockquote [ref=e228]:
+                  - generic [ref=e229]:
+                    - text: Make a 9:16 TikTok-style hook video about [topic] using
+                    - code [ref=e230]: /hyperframes
+                    - text: ", with bouncy captions synced to a TTS narration."
+              - generic [ref=e233]:
+                - heading "Iterate — talk to the agent like a video editor" [level=2] [ref=e234]
+                - generic [ref=e235]:
+                  - blockquote [ref=e236]: Make the title 2x bigger, swap to dark mode, and add a fade-out at the end.
+                  - blockquote [ref=e237]: Add a lower third at 0:03 with my name and title.
+            - generic [ref=e238]:
+              - text: The agent handles scaffolding, animation, and rendering. See the
+              - link "prompting guide" [ref=e239] [cursor=pointer]:
+                - /url: /guides/prompting
+              - text: for more patterns.
+            - generic [ref=e240]:
+              - img "Tip" [ref=e242]
+              - generic [ref=e245]:
+                - text: Skills encode HyperFrames-specific patterns — like required
+                - code [ref=e246]: class="clip"
+                - text: on timed elements, GSAP timeline registration, and
+                - code [ref=e247]: data-*
+                - text: attribute semantics — that are not in generic web docs. Using skills produces correct compositions from the start.
+            - 'heading "Navigate to header Option 2: Start a project manually" [level=2] [ref=e248]':
+              - link "Navigate to header" [ref=e249] [cursor=pointer]:
+                - /url: "#option-2-start-a-project-manually"
+                - img [ref=e251]
+              - generic [ref=e253] [cursor=pointer]: "Option 2: Start a project manually"
+            - heading "Navigate to header Prerequisites" [level=3] [ref=e254]:
+              - link "Navigate to header" [ref=e255] [cursor=pointer]:
+                - /url: "#prerequisites"
+                - img [ref=e257]
+              - generic [ref=e259] [cursor=pointer]: Prerequisites
+            - list [ref=e260]:
+              - listitem [ref=e261]:
+                - strong [ref=e262]: Node.js 22+
+                - text: — runtime for the CLI and dev server
+              - listitem [ref=e263]:
+                - strong [ref=e264]: FFmpeg
+                - text: — video encoding for local renders
+            - group [ref=e265]:
+              - generic "Install instructions" [ref=e266] [cursor=pointer]:
+                - img [ref=e268]
+                - paragraph [ref=e270]: Install instructions
+            - heading "Navigate to header Create your first video" [level=3] [ref=e271]:
+              - link "Navigate to header" [ref=e272] [cursor=pointer]:
+                - /url: "#create-your-first-video"
+                - img [ref=e274]
+              - generic [ref=e276] [cursor=pointer]: Create your first video
+            - list [ref=e277]:
+              - listitem [ref=e278]:
+                - generic [ref=e281]:
+                  - generic [ref=e282]: "1"
+                  - link "Navigate to header" [ref=e284] [cursor=pointer]:
+                    - /url: "#"
+                    - img [ref=e286]
+                - generic [ref=e288]:
+                  - paragraph [ref=e289]: Scaffold the project
+                  - generic [ref=e290]:
+                    - generic [ref=e291]:
+                      - generic [ref=e292]:
+                        - button "Copy the contents from the code block" [ref=e294] [cursor=pointer]:
+                          - img [ref=e295]
+                        - button "Ask AI" [ref=e299] [cursor=pointer]:
+                          - img [ref=e300]
+                      - code [ref=e306]:
+                        - generic [ref=e307]: npx hyperframes init my-video
+                        - generic [ref=e308]: cd my-video
+                    - generic [ref=e309]:
+                      - text: This starts an interactive wizard that walks you through example selection and media import. To skip prompts (e.g. in CI or from an agent), use
+                      - code [ref=e310]: "--non-interactive"
+                      - text: ":"
+                    - generic [ref=e311]:
+                      - generic [ref=e312]:
+                        - button "Copy the contents from the code block" [ref=e314] [cursor=pointer]:
+                          - img [ref=e315]
+                        - button "Ask AI" [ref=e319] [cursor=pointer]:
+                          - img [ref=e320]
+                      - code [ref=e326]:
+                        - generic [ref=e327]: npx hyperframes init my-video --non-interactive --example blank
+                    - generic [ref=e328]:
+                      - text: See
+                      - link "Examples" [ref=e329] [cursor=pointer]:
+                        - /url: /examples
+                      - text: for all available examples.
+                    - generic [ref=e330]: "This generates a project structure like:"
+                    - tree "File tree" [ref=e331]:
+                      - treeitem "my-video" [expanded] [level=1] [ref=e332] [cursor=pointer]:
+                        - img [ref=e333]
+                        - generic "my-video" [ref=e336]
+                        - group [ref=e337]:
+                          - treeitem "meta.json" [level=2] [ref=e339]:
+                            - img [ref=e340]
+                            - generic "meta.json" [ref=e343]
+                          - treeitem "index.html" [level=2] [ref=e344]:
+                            - img [ref=e345]
+                            - generic "index.html" [ref=e348]
+                          - treeitem "compositions" [expanded] [level=2] [ref=e349]:
+                            - img [ref=e350]
+                            - generic "compositions" [ref=e353]
+                            - group [ref=e354]:
+                              - treeitem "intro.html" [level=3] [ref=e356]:
+                                - img [ref=e357]
+                                - generic "intro.html" [ref=e360]
+                              - treeitem "captions.html" [level=3] [ref=e361]:
+                                - img [ref=e362]
+                                - generic "captions.html" [ref=e365]
+                          - treeitem "assets" [expanded] [level=2] [ref=e366]:
+                            - img [ref=e367]
+                            - generic "assets" [ref=e370]
+                            - group [ref=e371]:
+                              - treeitem "video.mp4" [level=3] [ref=e373]:
+                                - img [ref=e374]
+                                - generic "video.mp4" [ref=e377]
+                    - table [ref=e380]:
+                      - rowgroup [ref=e381]:
+                        - row "Path Purpose" [ref=e382]:
+                          - columnheader "Path" [ref=e383]
+                          - columnheader "Purpose" [ref=e384]
+                      - rowgroup [ref=e385]:
+                        - row "meta.json Project metadata (name, ID, creation date)" [ref=e386]:
+                          - cell "meta.json" [ref=e387]:
+                            - code [ref=e388]: meta.json
+                          - cell "Project metadata (name, ID, creation date)" [ref=e389]
+                        - row "index.html Root composition — your video’s entry point" [ref=e390]:
+                          - cell "index.html" [ref=e391]:
+                            - code [ref=e392]: index.html
+                          - cell "Root composition — your video’s entry point" [ref=e393]
+                        - row "compositions/ Sub-compositions loaded via data-composition-src" [ref=e394]:
+                          - cell "compositions/" [ref=e395]:
+                            - code [ref=e396]: compositions/
+                          - cell "Sub-compositions loaded via data-composition-src" [ref=e397]:
+                            - text: Sub-compositions loaded via
+                            - code [ref=e398]: data-composition-src
+                        - row "assets/ Media files (video, audio, images)" [ref=e399]:
+                          - cell "assets/" [ref=e400]:
+                            - code [ref=e401]: assets/
+                          - cell "Media files (video, audio, images)" [ref=e402]
+                    - generic [ref=e403]:
+                      - text: If you have a source video, pass it with
+                      - code [ref=e404]: "--video"
+                      - text: "for automatic transcription and captions:"
+                    - generic [ref=e405]:
+                      - generic [ref=e406]:
+                        - button "Copy the contents from the code block" [ref=e408] [cursor=pointer]:
+                          - img [ref=e409]
+                        - button "Ask AI" [ref=e413] [cursor=pointer]:
+                          - img [ref=e414]
+                      - code [ref=e420]:
+                        - generic [ref=e421]: npx hyperframes init my-video --example warm-grain --video ./intro.mp4
+                    - generic [ref=e422]:
+                      - code [ref=e423]: hyperframes init
+                      - text: installs AI agent skills automatically, so you can hand off to your AI agent at any point.
+              - listitem [ref=e424]:
+                - generic [ref=e427]:
+                  - generic [ref=e428]: "2"
+                  - link "Navigate to header" [ref=e430] [cursor=pointer]:
+                    - /url: "#"
+                    - img [ref=e432]
+                - generic [ref=e434]:
+                  - paragraph [ref=e435]: Preview in the browser
+                  - generic [ref=e436]:
+                    - generic [ref=e437]:
+                      - generic [ref=e438]:
+                        - button "Copy the contents from the code block" [ref=e440] [cursor=pointer]:
+                          - img [ref=e441]
+                        - button "Ask AI" [ref=e445] [cursor=pointer]:
+                          - img [ref=e446]
+                      - code [ref=e452]:
+                        - generic [ref=e453]: npx hyperframes preview
+                    - generic [ref=e454]:
+                      - text: This starts the Hyperframes Studio and opens your composition in the browser. Edits to
+                      - code [ref=e455]: index.html
+                      - text: reload automatically.
+                    - generic [ref=e456]:
+                      - img "Tip" [ref=e458]
+                      - generic [ref=e461]: The dev server supports hot reload — save your HTML file and the preview updates instantly, no manual refresh needed.
+              - listitem [ref=e462]:
+                - generic [ref=e465]:
+                  - generic [ref=e466]: "3"
+                  - link "Navigate to header" [ref=e468] [cursor=pointer]:
+                    - /url: "#"
+                    - img [ref=e470]
+                - generic [ref=e472]:
+                  - paragraph [ref=e473]: Edit the composition
+                  - generic [ref=e474]:
+                    - generic [ref=e475]: Open the project with your AI coding agent (Claude Code, Cursor, etc.) — skills are installed automatically and your agent knows how to create and edit compositions.
+                    - generic [ref=e476]:
+                      - text: Or edit
+                      - code [ref=e477]: index.html
+                      - text: "directly — here’s a minimal composition:"
+                    - generic [ref=e478]:
+                      - generic [ref=e479]:
+                        - generic "index.html" [ref=e481]
+                        - generic [ref=e482]:
+                          - button "Copy the contents from the code block" [ref=e484] [cursor=pointer]:
+                            - img [ref=e485]
+                          - button "Ask AI" [ref=e489] [cursor=pointer]:
+                            - img [ref=e490]
+                      - code [ref=e496]:
+                        - generic [ref=e497]: <div id="root" data-composition-id="my-video"
+                        - generic [ref=e498]: data-start="0" data-width="1920" data-height="1080">
+                        - generic [ref=e499]: <!-- 1. Define a timed text clip on track 0 -->
+                        - generic [ref=e500]: <h1 id="title" class="clip"
+                        - generic [ref=e501]: data-start="0" data-duration="5" data-track-index="0"
+                        - generic [ref=e502]: "style=\"font-size: 72px; color: white; text-align: center;"
+                        - generic [ref=e503]: "position: absolute; top: 50%; left: 50%;"
+                        - generic [ref=e504]: "transform: translate(-50%, -50%);\">"
+                        - generic [ref=e505]: Hello, Hyperframes!
+                        - generic [ref=e506]: </h1>
+                        - generic [ref=e507]: <!-- 2. Load GSAP for animation -->
+                        - generic [ref=e508]: <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+                        - generic [ref=e509]: <!-- 3. Create a paused timeline and register it -->
+                        - generic [ref=e510]: <script>
+                        - generic [ref=e511]: "const tl = gsap.timeline({ paused: true });"
+                        - generic [ref=e512]: "tl.from(\"#title\", { opacity: 0, y: -50, duration: 1 }, 0);"
+                        - generic [ref=e513]: "window.__timelines = window.__timelines || {};"
+                        - generic [ref=e514]: window.__timelines["my-video"] = tl;
+                        - generic [ref=e515]: </script>
+                        - generic [ref=e516]: </div>
+                    - generic [ref=e517]: "Three rules to remember:"
+                    - list [ref=e518]:
+                      - listitem [ref=e519]:
+                        - strong [ref=e520]: Root element
+                        - text: must have
+                        - code [ref=e521]: data-composition-id
+                        - text: ","
+                        - code [ref=e522]: data-width
+                        - text: ", and"
+                        - code [ref=e523]: data-height
+                      - listitem [ref=e524]:
+                        - strong [ref=e525]: Timed elements
+                        - text: need
+                        - code [ref=e526]: data-start
+                        - text: ","
+                        - code [ref=e527]: data-duration
+                        - text: ","
+                        - code [ref=e528]: data-track-index
+                        - text: ", and"
+                        - code [ref=e529]: class="clip"
+                      - listitem [ref=e530]:
+                        - strong [ref=e531]: GSAP timeline
+                        - text: must be created with
+                        - code [ref=e532]: "{ paused: true }"
+                        - text: and registered on
+                        - code [ref=e533]: window.__timelines
+              - listitem [ref=e534]:
+                - generic [ref=e537]:
+                  - generic [ref=e538]: "4"
+                  - link "Navigate to header" [ref=e540] [cursor=pointer]:
+                    - /url: "#"
+                    - img [ref=e542]
+                - generic [ref=e544]:
+                  - paragraph [ref=e545]: Render to MP4
+                  - generic [ref=e546]:
+                    - generic [ref=e547]:
+                      - generic [ref=e548]:
+                        - button "Copy the contents from the code block" [ref=e550] [cursor=pointer]:
+                          - img [ref=e551]
+                        - button "Ask AI" [ref=e555] [cursor=pointer]:
+                          - img [ref=e556]
+                      - code [ref=e562]:
+                        - generic [ref=e563]: npx hyperframes render --output output.mp4
+                    - generic [ref=e564]:
+                      - generic [ref=e565]:
+                        - generic "Expected output" [ref=e567]
+                        - generic [ref=e568]:
+                          - button "Copy the contents from the code block" [ref=e570] [cursor=pointer]:
+                            - img [ref=e571]
+                          - button "Ask AI" [ref=e575] [cursor=pointer]:
+                            - img [ref=e576]
+                      - code [ref=e582]:
+                        - generic [ref=e583]: ✔ Capturing frames... 150/150
+                        - generic [ref=e584]: ✔ Encoding MP4...
+                        - generic [ref=e585]: ✔ output.mp4 (1920x1080, 5.0s, 30fps)
+                    - generic [ref=e586]:
+                      - text: Your video is now at
+                      - code [ref=e587]: output.mp4
+                      - text: . Open it with any media player.
+            - heading "Navigate to header Requirements summary" [level=2] [ref=e588]:
+              - link "Navigate to header" [ref=e589] [cursor=pointer]:
+                - /url: "#requirements-summary"
+                - img [ref=e591]
+              - generic [ref=e593] [cursor=pointer]: Requirements summary
+            - table [ref=e596]:
+              - rowgroup [ref=e597]:
+                - row "Dependency Required Notes" [ref=e598]:
+                  - columnheader "Dependency" [ref=e599]
+                  - columnheader "Required" [ref=e600]
+                  - columnheader "Notes" [ref=e601]
+              - rowgroup [ref=e602]:
+                - row "Node.js 22+ Yes Runtime for CLI and dev server" [ref=e603]:
+                  - cell "Node.js 22+" [ref=e604]:
+                    - strong [ref=e605]: Node.js
+                    - text: 22+
+                  - cell "Yes" [ref=e606]
+                  - cell "Runtime for CLI and dev server" [ref=e607]
+                - row "npm or bun Yes Package manager" [ref=e608]:
+                  - cell "npm or bun" [ref=e609]:
+                    - strong [ref=e610]: npm
+                    - text: or bun
+                  - cell "Yes" [ref=e611]
+                  - cell "Package manager" [ref=e612]
+                - row "FFmpeg Yes Video encoding for local renders" [ref=e613]:
+                  - cell "FFmpeg" [ref=e614]:
+                    - strong [ref=e615]: FFmpeg
+                  - cell "Yes" [ref=e616]
+                  - cell "Video encoding for local renders" [ref=e617]
+                - row "Docker No Optional — for deterministic, reproducible renders" [ref=e618]:
+                  - cell "Docker" [ref=e619]:
+                    - strong [ref=e620]: Docker
+                  - cell "No" [ref=e621]
+                  - cell "Optional — for deterministic, reproducible renders" [ref=e622]
+            - heading "Navigate to header Next steps" [level=2] [ref=e623]:
+              - link "Navigate to header" [ref=e624] [cursor=pointer]:
+                - /url: "#next-steps"
+                - img [ref=e626]
+              - generic [ref=e628] [cursor=pointer]: Next steps
+            - generic [ref=e629]:
+              - link "Browse the Catalog 50+ ready-to-use blocks — transitions, overlays, data visualizations, and effects" [ref=e630] [cursor=pointer]:
+                - generic [ref=e631]:
+                  - img [ref=e633]
+                  - generic [ref=e634]:
+                    - heading "Browse the Catalog" [level=2] [ref=e635]
+                    - generic [ref=e637]: 50+ ready-to-use blocks — transitions, overlays, data visualizations, and effects
+              - link "GSAP Animation Add fade, slide, scale, and custom animations to your videos" [ref=e638] [cursor=pointer]:
+                - generic [ref=e639]:
+                  - img [ref=e641]
+                  - generic [ref=e642]:
+                    - heading "GSAP Animation" [level=2] [ref=e643]
+                    - generic [ref=e645]: Add fade, slide, scale, and custom animations to your videos
+              - link "Examples Start from built-in examples like Warm Grain and Swiss Grid" [ref=e646] [cursor=pointer]:
+                - generic [ref=e647]:
+                  - img [ref=e649]
+                  - generic [ref=e650]:
+                    - heading "Examples" [level=2] [ref=e651]
+                    - generic [ref=e653]: Start from built-in examples like Warm Grain and Swiss Grid
+              - 'link "Rendering Explore render options: quality presets, Docker mode, and GPU encoding" [ref=e654] [cursor=pointer]':
+                - generic [ref=e655]:
+                  - img [ref=e657]
+                  - generic [ref=e658]:
+                    - heading "Rendering" [level=2] [ref=e659]
+                    - generic [ref=e661]: "Explore render options: quality presets, Docker mode, and GPU encoding"
+          - generic [ref=e662]:
+            - link "Previous" [ref=e663] [cursor=pointer]:
+              - /url: /introduction
+              - img [ref=e664]
+              - generic [ref=e666]: Previous
+            - link "Examples Built-in examples for common video patterns. Hover to preview animations. Next" [ref=e667] [cursor=pointer]:
+              - /url: /examples
+              - generic [ref=e668]:
+                - generic [ref=e669]:
+                  - generic [ref=e670]: Examples
+                  - generic [ref=e671]: Built-in examples for common video patterns. Hover to preview animations.
+                - generic [ref=e673]:
+                  - generic [ref=e674]: Next
+                  - img [ref=e675]
+          - generic [ref=e678]:
+            - textbox "Ask a question..." [ref=e679]
+            - generic: ⌘I
+            - button "Send message" [disabled] [ref=e680]:
+              - img [ref=e681]
+          - contentinfo [ref=e683]:
+            - link "github" [ref=e685] [cursor=pointer]:
+              - /url: https://github.com/heygen-com/hyperframes
+              - generic [ref=e686]: github
+              - img [ref=e687]
+            - link "Powered by This documentation is built and hosted on Mintlify, a developer documentation platform" [ref=e690] [cursor=pointer]:
+              - /url: https://www.mintlify.com?utm_campaign=poweredBy&utm_medium=referral&utm_source=hyperframes
+              - generic [ref=e691]: Powered by
+              - img [ref=e692]
+              - generic [ref=e701]: This documentation is built and hosted on Mintlify, a developer documentation platform
+        - generic [ref=e704]:
+          - button "On this page" [ref=e705] [cursor=pointer]:
+            - img [ref=e706]
+            - generic [ref=e707]: On this page
+          - list [ref=e709]:
+            - listitem [ref=e710]:
+              - 'link "Option 1: With an AI coding agent (recommended)" [ref=e711] [cursor=pointer]':
+                - /url: "#option-1-with-an-ai-coding-agent-recommended"
+            - listitem [ref=e712]:
+              - 'link "Try it: example prompts" [ref=e713] [cursor=pointer]':
+                - /url: "#try-it-example-prompts"
+            - listitem [ref=e714]:
+              - 'link "Option 2: Start a project manually" [ref=e715] [cursor=pointer]':
+                - /url: "#option-2-start-a-project-manually"
+            - listitem [ref=e716]:
+              - link "Prerequisites" [ref=e717] [cursor=pointer]:
+                - /url: "#prerequisites"
+            - listitem [ref=e718]:
+              - link "Create your first video" [ref=e719] [cursor=pointer]:
+                - /url: "#create-your-first-video"
+            - listitem [ref=e720]:
+              - link "Requirements summary" [ref=e721] [cursor=pointer]:
+                - /url: "#requirements-summary"
+            - listitem [ref=e722]:
+              - link "Next steps" [ref=e723] [cursor=pointer]:
+                - /url: "#next-steps"
+    - generic:
+      - generic [ref=e725]:
+        - generic [ref=e726]:
+          - img [ref=e727]
+          - generic [ref=e730]: Assistant
+        - generic [ref=e731]:
+          - button [ref=e732] [cursor=pointer]:
+            - img [ref=e733]
+          - button [ref=e738] [cursor=pointer]:
+            - img [ref=e739]
+      - generic [ref=e743]: Responses are generated using AI and may contain mistakes.
+      - generic [ref=e745]:
+        - textbox [ref=e746]:
+          - /placeholder: Ask a question...
+        - generic [ref=e747]:
+          - button [ref=e748] [cursor=pointer]:
+            - img [ref=e749]
+          - button [disabled] [ref=e751]:
+            - img [ref=e752]

@@ -32,8 +32,6 @@ const files = [
   'background.js',
   'content.js',
   'dark-mode.css',
-  'domainPreferences.js',
-  'earlyDarkMode.js',
   'manifest.json',
   'popup.css',
   'popup.html',

@@ -1,24 +1,67 @@
-@media (prefers-color-scheme: dark) {
-  :root {
-    color-scheme: dark;
-  }
+html.simply-dark {
+  --sd-bg: #121212;
+  --sd-text: #e4e4e4;
+  --sd-link: #3391ff;
+  --sd-border: #555555;
+  color-scheme: dark;
+  background-color: var(--sd-bg) !important;
+  color: var(--sd-text) !important;
 }
 
-html[style*="color-scheme: dark"],
-:root[style*="color-scheme: dark"],
-.simply-dark-mode {
-  background-color: #1a1a1a !important;
-  color: #e0e0e0 !important;
+html.simply-dark body {
+  background-color: var(--sd-bg) !important;
+  color: var(--sd-text) !important;
 }
 
-html[style*="color-scheme: dark"] a,
-:root[style*="color-scheme: dark"] a,
-.simply-dark-mode a {
-  color: #6ab0ff !important;
+html.simply-dark *:not(a, img, video, canvas, picture, pre, code, svg, svg *) {
+  background-color: transparent !important;
+  background-image: none !important;
+  color: var(--sd-text) !important;
+  border-color: var(--sd-border) !important;
 }
 
-html[style*="color-scheme: dark"] img,
-:root[style*="color-scheme: dark"] img,
-.simply-dark-mode img {
-  filter: brightness(0.8) contrast(1.2);
+html.simply-dark *::before,
+html.simply-dark *::after {
+  background-image: none !important;
+}
+
+html.simply-dark a,
+html.simply-dark a * {
+  color: var(--sd-link) !important;
+}
+
+html.simply-dark [style*="background-clip: text"],
+html.simply-dark [style*="-webkit-background-clip: text"] {
+  color: transparent !important;
+  -webkit-text-fill-color: transparent !important;
+  background-color: transparent !important;
+  background-image: revert !important;
+}
+
+html.simply-dark svg:not([fill]):not([style*="fill"]) {
+  fill: currentColor;
+}
+
+html.simply-dark input::placeholder,
+html.simply-dark textarea::placeholder {
+  color: #888 !important;
+  opacity: 1;
+}
+
+html.simply-dark input:-webkit-autofill,
+html.simply-dark textarea:-webkit-autofill {
+  -webkit-text-fill-color: var(--sd-text) !important;
+  -webkit-box-shadow: 0 0 0 1000px var(--sd-bg) inset !important;
+  caret-color: var(--sd-text);
+}
+
+html.simply-dark ::-webkit-scrollbar {
+  background: var(--sd-bg);
+}
+html.simply-dark ::-webkit-scrollbar-thumb {
+  background: #555;
+  border-radius: 4px;
+}
+html.simply-dark ::-webkit-scrollbar-thumb:hover {
+  background: #777;
 }

@@ -26,6 +26,8 @@ You can customize the dark mode colors in the popup. The available options are:
 - Link Color
 - Border Color
 
+Color changes preview live on the active page as you drag each picker. Click **Save** to persist the values, or close the popup to discard the preview and revert to your last saved colors. **Reset** returns all four colors to their defaults.
+
 ![Simply Dark Options](images/options.png)
 
 ## Contributing

@@ -1,5 +1,14 @@
 {
+  "scripts": {
+    "test": "playwright test",
+    "test:install": "playwright install chromium",
+    "package": "node package.js"
+  },
   "dependencies": {
     "archiver": "^7.0.1"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.47.0",
+    "adm-zip": "^0.5.0"
   }
 }
