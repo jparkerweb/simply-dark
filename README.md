@@ -1,5 +1,7 @@
 # Simply Dark
 
+<img src="https://github.com/jparkerweb/simply-dark/blob/main/simply-dark.jpg?raw=true" alt="banner">
+
 Simply Dark is a Chrome extension that provides a customizable dark mode for any website.
 
 ## Features
