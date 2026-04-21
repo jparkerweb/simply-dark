@@ -4,6 +4,11 @@
 
 Simply Dark is a Chrome extension that provides a customizable dark mode for any website.
 
+## Install
+
+Get Simply Dark from the Chrome Web Store:
+[https://chromewebstore.google.com/detail/simply-dark/dgpoehekglnaelmdigallfjfhlhejnfo](https://chromewebstore.google.com/detail/simply-dark/dgpoehekglnaelmdigallfjfhlhejnfo)
+
 ## Features
 
 - Toggle dark mode on/off for individual websites
