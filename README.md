@@ -4,6 +4,13 @@
 
 Simply Dark is a Chrome extension that provides a customizable dark mode for any website.
 
+### Maintained by
+<a href="https://www.equilllabs.com">
+  <img src="https://raw.githubusercontent.com/jparkerweb/eQuill-Labs/refs/heads/main/src/static/images/logo-text-outline.png" alt="eQuill Labs" height="40">
+</a>
+
+---
+
 ## Install
 
 Get Simply Dark from the Chrome Web Store:
